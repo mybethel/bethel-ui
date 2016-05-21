@@ -1,36 +1,45 @@
 <md-toolbar class="md-hue-2" flex="100">
   <div class="md-toolbar-tools">
-    <img class="logo" src="images/logo-landscape.svg" height="50%" />
-    {{ $ctrl.title }}
-    <span flex></span>
+    <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+      <md-icon md-svg-icon="md/menu.svg"></md-icon>
+    </md-button>
+    <md-button class="page-title" hide-xs ng-href="#">
+      {{ $ctrl.title || 'Dashboard' }}
+    </md-button>
+    <logo></logo>
+    <span class="flex"></span>
     <a class="md-button md-default-theme" href="#/settings" hide-sm hide-xs>
-      <span>{{ $ctrl.ministry.name }}</span>
+      <span>{{ $ctrl.ministry.name || $ctrl.user.name || 'Welcome!' }}</span>
     </a>
-    <md-menu>
+    <img alt="{{ $ctrl.user.name }}" ng-src="{{ $ctrl.user.avatar || 'http://static.bethel.io/images/default_avatar_white.png' }}" />
+    <md-menu md-position-mode="target-right target">
       <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button">
         <md-icon md-menu-origin>arrow_drop_down</md-icon>
       </md-button>
-      <md-menu-content>
+      <md-menu-content width="3">
         <md-menu-item ng-repeat="authMinistry in $ctrl.ministries">
           <md-button ng-href="session/ministry/{{ authMinistry.id }}">
-            {{ authMinistry.name }}
+            {{ $ctrl.ministry.name }}
           </md-button>
         </md-menu-item>
         <md-menu-divider ng-if="$ctrl.ministries.length"></md-menu-divider>
         <md-menu-item>
-          <md-button ng-href="#/settings">
-            <md-icon>settings_gear</md-icon>
-            Settings
+          <md-button ng-click="$ctrl.userMenu('settings')">
+            <div layout="row" flex>
+              <p flex>Settings</p>
+              <md-icon md-svg-icon="md/settings.svg" md-menu-align-target style="margin: auto 3px auto 0;"></md-icon>
+            </div>
           </md-button>
         </md-menu-item>
         <md-menu-item>
-          <md-button ng-href="logout">
-            <md-icon>exit_to_app</md-icon>
-            Logout
+          <md-button ng-click="$ctrl.userMenu('logout')">
+            <div layout="row" flex>
+              <p flex>Logout</p>
+              <md-icon md-svg-icon="md/logout.svg" md-menu-align-target style="margin: auto 3px auto 0;"></md-icon>
+            </div>
           </md-button>
         </md-menu-item>
       </md-menu-content>
     </md-menu>
-    <img alt="{{ $ctrl.user.name }}" height="100%" ng-src="{{ $ctrl.user.avatar }}" />
   </div>
 </md-toolbar>

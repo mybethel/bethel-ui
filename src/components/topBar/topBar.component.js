@@ -1,4 +1,6 @@
-// The Top Nav component is responsible for the global navigation bar at the
+// <top-bar>
+// ===
+// The Top Bar component is responsible for the global navigation bar at the
 // top of the interface.
 
 // Component Setup
@@ -8,7 +10,6 @@
 // * `ministry`: The ministry object associated with the user.
 // * `ministries`: Additional ministries the user is authorized to manage.
 // * `user`: The currently logged-in user.
-
 angular.module('bethel.ui.topBar', []).component('topBar', {
   bindings: {
     ministry: '<',
@@ -21,7 +22,6 @@ angular.module('bethel.ui.topBar', []).component('topBar', {
 
 // Component Controller
 // --------------------
-
 function TopNavComponent($rootScope) {
 
   var $ctrl = this;

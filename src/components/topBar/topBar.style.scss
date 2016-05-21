@@ -1,0 +1,39 @@
+top-bar {
+  .md-toolbar-tools {
+    padding: 0 30px;
+    & >.md-button:first-child {
+      //margin-right: 30px;
+    }
+    & md-menu:last-child {
+      margin-right: 0;
+    }
+    .md-button {
+      font-size: 11px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+  logo {
+    left: 50%;
+    margin-left: -66px;
+    position: absolute;
+    top: 19px;
+    svg {
+      height: 26px;
+    }
+  }
+  img {
+    border-radius: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
+  md-menu {
+    width: 24px;
+    .md-button.md-icon-button {
+      margin-left: 0;
+      width: 24px;
+    }
+  }
+}

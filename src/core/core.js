@@ -1,10 +1,9 @@
+import './style/importer.scss';
 import '../components';
 import './services';
 
 angular.module('bethel.ui', [
   'ngMaterial',
-  'bethel.ui.login',
-  'bethel.ui.topBar'
   'bethel.ui.components',
   'bethel.ui.services'
 ])

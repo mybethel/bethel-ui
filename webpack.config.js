@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -5,6 +6,10 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+var mdIcons = require('./src/core/services/icon/materialIcons');
+var mdIconTypes = Object.keys(mdIcons).join('|');
+var mdIconGlyphs = [].concat.apply([], _.values(mdIcons)).join('|');
 
 module.exports = {
   entry: {
@@ -34,6 +39,7 @@ module.exports = {
       assetNameRegExp: /\.min\.css$/,
       cssProcessorOptions: { discardComments: { removeAll: true } }
     }),
+    new webpack.ContextReplacementPlugin(/material-design-icons/, new RegExp(`(${mdIconTypes})/svg/production/ic_(${mdIconGlyphs})_24px.svg`)),
     new webpack.optimize.DedupePlugin(),
     new webpack.NoErrorsPlugin()
   ],

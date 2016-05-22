@@ -1,11 +1,10 @@
 // <top-bar>
-// ===
+// ==
 // The Top Bar component is responsible for the global navigation bar at the
 // top of the interface.
 
-// Component Setup
-// ---------------
-
+// Setup
+// --
 // All component bindings are one-way:
 // * `ministry`: The ministry object associated with the user.
 // * `ministries`: Additional ministries the user is authorized to manage.
@@ -20,8 +19,8 @@ angular.module('bethel.ui.topBar', []).component('topBar', {
   controller: TopNavComponent
 });
 
-// Component Controller
-// --------------------
+// Controller
+// --
 function TopNavComponent($rootScope) {
 
   var $ctrl = this;
@@ -37,6 +36,11 @@ function TopNavComponent($rootScope) {
     }
     $ctrl.title = toState.data.pageTitle;
   });
+
+  // Emit an event to toggle between the expanded and collapsed nav states.
+  this.toggleNav = function() {
+    $rootScope.$emit('bethel:nav:toggle', '');
+  };
 
 }
 

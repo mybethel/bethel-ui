@@ -1,0 +1,26 @@
+<md-sidenav class="md-sidenav-left" md-component-id="main-left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="4">
+  <md-content layout="column">
+    <div class="close" hide-gt-sm>
+      <md-button aria-label="Hide applications" class="md-icon-button" ng-click="$ctrl.toggle()">
+        <md-icon md-svg-icon="md/close.svg"></md-icon>
+      </md-button>
+    </div>
+    <md-list flex flex-fill layout="column">
+      <md-list-item ng-click="$ctrl.navigateTo('staff.users', $event)" aria-label="Staff">
+        <md-icon md-svg-icon="md/verified_user.svg"></md-icon>
+        <p>Staff</p>
+      </md-list-item>
+      <md-list-item ng-click="$ctrl.navigateTo(nav.url, $event)" ng-repeat="nav in $ctrl.navigation" aria-label="{{ nav.title }}">
+        <md-icon md-svg-icon="md/{{ nav.icon }}.svg"></md-icon>
+        <p>{{ nav.title }}</p>
+      </md-list-item>
+      <span flex></span>
+      <md-divider></md-divider>
+      <md-list-item ng-click="$ctrl.navigateTo('settings', $event)" aria-label="Settings">
+        <md-icon md-svg-icon="md/settings.svg"></md-icon>
+        <p>Settings</p>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</md-sidenav>
+<md-content flex ng-transclude><!-- PAGE CONTENT --></md-content>

@@ -1,0 +1,59 @@
+main-content {
+  md-content {
+    padding: 1rem;
+  }
+  md-sidenav, md-sidenav md-content {
+    background: $brand-dark;
+  }
+  md-sidenav {
+    @media (min-width: $layout-breakpoint-sm) {
+      width: 72px;
+      min-width: 72px;
+      &._md-closed {
+        width: 240px;
+        min-width: 240px;
+      }
+    }
+    md-content {
+      padding: 0 8px;
+      height: 100%;
+      div.close .md-button.md-icon-button {
+        float: right;
+        @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: portrait) {
+          height: 56px;
+        }
+        @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: landscape) {
+          height: 48px;
+        }
+        md-icon {
+          fill: #FFF;
+        }
+      }
+    }
+    md-divider {
+      border-top-color: rgba(255, 255, 255, 0.12);
+      margin: 8px 0;
+    }
+    md-list-item {
+      height: 48px;
+      .md-button {
+        min-width: 55px;
+      }
+      md-icon {
+        fill: #FFF;
+        margin: 0 28px 0 0 !important;
+      }
+      p {
+        color: #FFF;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        @media (min-width: $layout-breakpoint-sm) {
+          margin-left: 12px !important;
+        }
+      }
+    }
+  }
+}

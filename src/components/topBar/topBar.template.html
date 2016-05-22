@@ -1,6 +1,6 @@
 <md-toolbar class="md-hue-2" flex="100">
   <div class="md-toolbar-tools">
-    <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+    <md-button aria-label="Show applications" class="md-icon-button" ng-click="$ctrl.toggleNav()">
       <md-icon md-svg-icon="md/menu.svg"></md-icon>
     </md-button>
     <md-button class="page-title" hide-xs ng-href="#">
@@ -13,8 +13,8 @@
     </a>
     <img alt="{{ $ctrl.user.name }}" ng-src="{{ $ctrl.user.avatar || 'http://static.bethel.io/images/default_avatar_white.png' }}" />
     <md-menu md-position-mode="target-right target">
-      <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button">
-        <md-icon md-menu-origin>arrow_drop_down</md-icon>
+      <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open User Menu">
+        <md-icon md-svg-icon="md/arrow_drop_down.svg"></md-icon>
       </md-button>
       <md-menu-content width="3">
         <md-menu-item ng-repeat="authMinistry in $ctrl.ministries">
@@ -35,7 +35,7 @@
           <md-button ng-click="$ctrl.userMenu('logout')">
             <div layout="row" flex>
               <p flex>Logout</p>
-              <md-icon md-svg-icon="md/logout.svg" md-menu-align-target style="margin: auto 3px auto 0;"></md-icon>
+              <md-icon md-svg-icon="md/exit_to_app.svg" md-menu-align-target style="margin: auto 3px auto 0;"></md-icon>
             </div>
           </md-button>
         </md-menu-item>

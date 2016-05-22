@@ -25,7 +25,7 @@ angular.module('bethel.ui', [
   var style = document.createElement('link');
   style.rel = 'stylesheet';
   style.type = 'text/css';
-  style.href = 'https://fonts.googleapis.com/css?family=Material+Icons|Lato:400,300';
+  style.href = 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 
   var head = angular.element(document.querySelector('head'));
   head.append(style);

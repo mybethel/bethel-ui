@@ -1,8 +1,8 @@
 top-bar {
   .md-toolbar-tools {
-    padding: 0 30px;
+    padding: 0 24px;
     & >.md-button:first-child {
-      //margin-right: 30px;
+      margin-right: 18px;
     }
     & md-menu:last-child {
       margin-right: 0;
@@ -20,6 +20,12 @@ top-bar {
     margin-left: -66px;
     position: absolute;
     top: 19px;
+    @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: portrait) {
+      top: 15px;
+    }
+    @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: landscape) {
+      top: 11px;
+    }
     svg {
       height: 26px;
     }

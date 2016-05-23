@@ -1,5 +1,5 @@
 {
-  "name": "bethel-ui",
+  "name": "@bethel/ui",
   "version": "0.1.0",
   "description": "Bethel user interface components and styling.",
   "repository": "https://github.com/mybethel/bethel-ui.git",

@@ -6,11 +6,11 @@
       </md-button>
     </div>
     <md-list flex flex-fill layout="column">
-      <md-list-item ng-click="$ctrl.navigateTo('staff.users', $event)" aria-label="Staff">
+      <md-list-item aria-label="Staff" ng-click="$ctrl.navigateTo('staff.users', $event)" ng-if="$ctrl.admin">
         <md-icon md-svg-icon="md/verified_user.svg"></md-icon>
         <p>Staff</p>
       </md-list-item>
-      <md-list-item ng-click="$ctrl.navigateTo(nav.url, $event)" ng-repeat="nav in $ctrl.navigation" aria-label="{{ nav.title }}">
+      <md-list-item ng-click="$ctrl.navigateTo(nav.url, $event)" ng-repeat="nav in $ctrl.links" aria-label="{{ nav.title }}">
         <md-icon md-svg-icon="md/{{ nav.icon }}.svg"></md-icon>
         <p>{{ nav.title }}</p>
       </md-list-item>

@@ -9,6 +9,7 @@
 angular.module('bethel.ui.mainContent', ['ui.router'])
 .component('mainContent', {
   bindings: {
+    links: '<',
     admin: '<'
   },
   controller: MainContentController,
@@ -25,19 +26,6 @@ function MainContentController($mdSidenav, $rootScope, $state) {
   this.toggle = function() {
     $mdSidenav('main-left').toggle();
   };
-
-  // These are the navigation links that will appear to the left of the
-  // main body content. A "Settings" link will also appear below these.
-  this.navigation = [
-    { title: 'Dashboard', icon: 'dashboard', url: 'dashboard' },
-    { title: 'Podcasting', icon: 'mic', url: 'podcast' },
-    { title: 'Media', icon: 'play_circle_filled', url: 'beta' },
-    { title: 'Mobile App', icon: 'phone_iphone', url: 'beta' },
-    { title: 'Volunteers', icon: 'people', url: 'beta' },
-    { title: 'Live Streaming', icon: 'videocam', url: 'streaming' },
-    { title: 'Giving', icon: 'attach_money', url: 'beta' },
-    { title: 'Social Media', icon: 'thumb_up', url: 'beta' }
-  ];
 
   // (UI Router)[https://angular-ui.github.io/ui-router/] resolves all links.
   this.navigateTo = $state.go;

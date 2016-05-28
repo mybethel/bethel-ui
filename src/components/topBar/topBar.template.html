@@ -3,9 +3,7 @@
     <md-button aria-label="Show applications" class="md-icon-button" ng-click="$ctrl.toggleNav()">
       <md-icon md-svg-icon="md/menu.svg"></md-icon>
     </md-button>
-    <md-button class="page-title" hide-xs ng-href="#">
-      {{ $ctrl.title || 'Dashboard' }}
-    </md-button>
+    {{ $ctrl.title || 'Dashboard' }}
     <logo></logo>
     <span class="flex"></span>
     <a class="md-button md-default-theme" href="#/settings" hide-sm hide-xs>

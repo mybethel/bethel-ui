@@ -1,8 +1,13 @@
 top-bar {
   .md-toolbar-tools {
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     padding: 0 24px;
+    text-transform: uppercase;
     & >.md-button:first-child {
-      margin-right: 18px;
+      margin-right: 32px;
     }
     & md-menu:last-child {
       margin-right: 0;

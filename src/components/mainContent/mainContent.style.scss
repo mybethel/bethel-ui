@@ -1,6 +1,13 @@
 main-content {
   md-content {
-    padding: 1rem;
+    background-color: #f4f6f8;
+    & > md-tabs {
+      width: 100%;
+      md-tab-content > div,
+      md-tab-content > div > md-content {
+        height: 100%;
+      }
+    }
   }
   md-sidenav, md-sidenav md-content {
     background: $brand-dark;

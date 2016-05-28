@@ -1,5 +1,5 @@
 <md-sidenav class="md-sidenav-left" md-component-id="main-left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="4">
-  <md-content layout="column">
+  <md-content flex flex-fill layout="column">
     <div class="close" hide-gt-sm>
       <md-button aria-label="Hide applications" class="md-icon-button" ng-click="$ctrl.toggle()">
         <md-icon md-svg-icon="md/close.svg"></md-icon>
@@ -23,4 +23,4 @@
     </md-list>
   </md-content>
 </md-sidenav>
-<md-content flex ng-transclude><!-- PAGE CONTENT --></md-content>
+<md-content flex layout="column" layout-align="center center" ui-view><!-- PAGE CONTENT --></md-content>

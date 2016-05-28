@@ -21,9 +21,13 @@ angular.module('bethel.ui.topBar', []).component('topBar', {
 
 // Controller
 // --
-function TopNavComponent($rootScope) {
+function TopNavComponent($rootScope, $state) {
 
   var $ctrl = this;
+
+  this.$postLink = () => {
+    this.title = $state.current.data.pageTitle;
+  };
 
   // `$stateChangeSuccess` is called whenever the route changes in order to
   // update the title of the navbar. The title shown is provided by the state
@@ -44,4 +48,4 @@ function TopNavComponent($rootScope) {
 
 }
 
-TopNavComponent.$inject = ['$rootScope'];
+TopNavComponent.$inject = ['$rootScope', '$state'];

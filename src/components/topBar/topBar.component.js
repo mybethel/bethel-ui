@@ -26,7 +26,8 @@ function TopNavComponent($rootScope, $state) {
   var $ctrl = this;
 
   this.$postLink = () => {
-    this.title = $state.current.data.pageTitle;
+    if (!$state.current || !$state.current.data) return;
+    this.title = $state.current.data.pageTitle || '';
   };
 
   // `$stateChangeSuccess` is called whenever the route changes in order to
@@ -34,11 +35,7 @@ function TopNavComponent($rootScope, $state) {
   // configuration for that route.
   // https://github.com/angular-ui/ui-router/wiki#state-change-events
   $rootScope.$on('$stateChangeSuccess', function(event, toState) {
-    if (!toState.data || !toState.data.pageTitle) {
-      $ctrl.title = '';
-      return;
-    }
-    $ctrl.title = toState.data.pageTitle;
+    $ctrl.title = toState.data && toState.data.pageTitle || '';
   });
 
   // Emit an event to toggle between the expanded and collapsed nav states.

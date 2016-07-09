@@ -1,4 +1,16 @@
 top-bar {
+  min-height: 64px;
+  @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: portrait) {
+    min-height: 56px;
+  }
+  @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: landscape) {
+    min-height: 48px;
+  }
+  md-toolbar {
+    @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: portrait) {
+      color: transparent;
+    }
+  }
   .md-toolbar-tools {
     font-size: 11px;
     font-family: 'Montserrat', sans-serif;
@@ -6,6 +18,9 @@ top-bar {
     letter-spacing: 0.5px;
     padding: 0 24px;
     text-transform: uppercase;
+    @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: portrait) {
+      color: transparent;
+    }
     & >.md-button:first-child {
       margin-right: 32px;
     }

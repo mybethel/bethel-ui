@@ -12,12 +12,8 @@ top-bar {
     }
   }
   .md-toolbar-tools {
-    font-size: 11px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    @extend %buttons-labels;
     padding: 0 24px;
-    text-transform: uppercase;
     @media (min-width: 0) and (max-width: $layout-breakpoint-sm - 1) and (orientation: portrait) {
       color: transparent;
     }
@@ -28,11 +24,7 @@ top-bar {
       margin-right: 0;
     }
     .md-button {
-      font-size: 11px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
+      @extend %buttons-labels;
     }
   }
   logo {

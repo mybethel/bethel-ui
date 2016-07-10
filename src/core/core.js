@@ -10,8 +10,8 @@ angular.module('bethel.ui', [
 .config(['$mdThemingProvider', function($mdThemingProvider) {
 
   $mdThemingProvider.definePalette('brandBlue', $mdThemingProvider.extendPalette('blue', {
-    '500': '1591b5',
-    '800': '106982'
+    500: '1591b5',
+    800: '106982'
   }));
 
   $mdThemingProvider.theme('default')

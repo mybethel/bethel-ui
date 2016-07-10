@@ -1,6 +1,8 @@
 @import 'variables',
+        'typography',
         'layout';
 
-@import '../../components/logo/logo.style',
+@import '../../components/cards/actionCard/actionCard.style',
+        '../../components/logo/logo.style',
         '../../components/mainContent/mainContent.style',
         '../../components/topBar/topBar.style';

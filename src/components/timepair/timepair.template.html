@@ -1,0 +1,12 @@
+<md-input-container>
+  <label>Start</label>
+  <md-select ng-model="start">
+    <md-option ng-repeat="time in startTimes" value="{{ time.raw }}">{{ time.display }}</md-option>
+  </md-select>
+</md-input-container>
+<md-input-container>
+  <label>End</label>
+  <md-select ng-disabled="!start" ng-model="end">
+    <md-option ng-repeat="time in endTimes" value="{{ time.raw }}">{{ time.display }}<small> ({{ timepairDuration($index) }})</small></md-option>
+  </md-select>
+</md-input-container>

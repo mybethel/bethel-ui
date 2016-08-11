@@ -2,6 +2,7 @@ import './cards';
 import './login/login.component';
 import './logo/logo.component';
 import './mainContent/mainContent.component';
+import './timepair/timepair.directive';
 import './topBar/topBar.component';
 
 angular.module('bethel.ui.components', [
@@ -9,5 +10,6 @@ angular.module('bethel.ui.components', [
   'bethel.ui.login',
   'bethel.ui.logo',
   'bethel.ui.mainContent',
+  'bethel.ui.timepair',
   'bethel.ui.topBar'
 ]);

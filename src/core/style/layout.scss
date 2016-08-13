@@ -1,3 +1,59 @@
+$grid-spacing: 2%;
+
 html, body {
   background-color: $brand-blue-dark;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 0 $grid-spacing;
+  position: relative;
+  width: 100%;
+}
+.column,
+.columns {
+  box-sizing: border-box;
+  float: left;
+  padding: $grid-spacing 0;
+  width: 100%;
+
+  @media (min-width: 550px) {
+    margin-left: $grid-spacing;
+    &:first-child {
+      margin-left: 0;
+    }
+    &.one {
+      width: (100% / 12) - ($grid-spacing * 11 / 12);
+    }
+    &.two {
+      width: (100% / 6) - ($grid-spacing * 10 / 12);
+    }
+    &.three {
+      width: (100% / 4) - ($grid-spacing * 9 / 12);
+    }
+    &.four, &.third {
+      width: (100% / 3) - ($grid-spacing * 8 / 12);
+    }
+    &.five {
+      width: (100% / 2.4) - ($grid-spacing * 7 / 12);
+    }
+    &.six, &.half {
+      width: (100% / 2) - ($grid-spacing * 6 / 12);
+    }
+    &.seven {
+      width: (100% / 1.714285714285714) - ($grid-spacing * 5 / 12);
+    }
+    &.eight, &.two-third {
+      width: (100% / 1.5) - ($grid-spacing * 4 / 12);
+    }
+    &.nine {
+      width: (100% / 1.333333333333333) - ($grid-spacing * 3 / 12);
+    }
+    &.ten {
+      width: (100% / 1.2) - ($grid-spacing * 2 / 12);
+    }
+    &.eleven {
+      width: (100% / 1.090909090909091) - ($grid-spacing * 1 / 12);
+    }
+  }
 }

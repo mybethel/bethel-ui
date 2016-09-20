@@ -6,11 +6,11 @@
     {{ $ctrl.title || 'Dashboard' }}
     <logo></logo>
     <span class="flex"></span>
-    <a class="md-button md-default-theme" href="#/settings" hide-sm hide-xs>
+    <a class="md-button md-default-theme" href="#/settings" hide-sm hide-xs ng-if="$ctrl.user.name">
       <span>{{ $ctrl.ministry.name || $ctrl.user.name || 'Welcome!' }}</span>
     </a>
-    <img alt="{{ $ctrl.user.name }}" ng-src="{{ $ctrl.user.avatar || 'http://static.bethel.io/images/default_avatar_white.png' }}" />
-    <md-menu md-position-mode="target-right target">
+    <img alt="{{ $ctrl.user.name }}" ng-if="$ctrl.user.name" ng-src="{{ $ctrl.user.avatar || 'http://static.bethel.io/images/default_avatar_white.png' }}" />
+    <md-menu md-position-mode="target-right target" ng-if="$ctrl.user.name">
       <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open User Menu">
         <md-icon md-svg-icon="md/arrow_drop_down.svg"></md-icon>
       </md-button>

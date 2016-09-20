@@ -23,4 +23,5 @@
     </md-list>
   </md-content>
 </md-sidenav>
-<md-content flex layout="column" ui-view><!-- PAGE CONTENT --></md-content>
+<md-content flex layout="column" ng-if="!$ctrl.static" ui-view><!-- PAGE CONTENT --></md-content>
+<md-content flex layout="column" ng-if="$ctrl.static" ng-transclude><!-- PAGE CONTENT --></md-content>

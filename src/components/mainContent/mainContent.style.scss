@@ -16,7 +16,7 @@ main-content {
     @media (min-width: $layout-breakpoint-sm) {
       width: 72px;
       min-width: 72px;
-      &._md-closed {
+      &.md-closed {
         width: 240px;
         min-width: 240px;
       }

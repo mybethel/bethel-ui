@@ -9,8 +9,9 @@
 angular.module('bethel.ui.mainContent', ['ui.router'])
 .component('mainContent', {
   bindings: {
+    admin: '<',
     links: '<',
-    admin: '<'
+    static: '<'
   },
   controller: MainContentController,
   template: require('./mainContent.template.html'),
@@ -19,7 +20,7 @@ angular.module('bethel.ui.mainContent', ['ui.router'])
 
 // Controller
 // --
-function MainContentController($mdSidenav, $rootScope, $state) {
+function MainContentController($mdSidenav, $rootScope, $state, $transclude) {
 
   // We use the built-in `.toggle()` function for both the expande/collapse
   // animation on Desktop and the show/hide animation on Mobile.
@@ -38,4 +39,4 @@ function MainContentController($mdSidenav, $rootScope, $state) {
 
 }
 
-MainContentController.$inject = ['$mdSidenav', '$rootScope', '$state'];
+MainContentController.$inject = ['$mdSidenav', '$rootScope', '$state', '$transclude'];

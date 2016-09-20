@@ -1,0 +1,52 @@
+login {
+  align-items: center;
+  padding: 1rem;
+  img {
+    display: block;
+    margin: 1.5rem auto 2rem;
+    max-width: 12rem;
+  }
+  form,
+  md-card {
+    margin: 0 auto 1.25rem;
+    max-width: 24rem;
+    width: 100%;
+  }
+  button {
+    box-shadow: none !important;
+    margin-bottom: 1rem;
+    span {
+      font-size: 1.125rem;
+      font-weight: normal;
+      line-height: 2.5rem;
+      text-transform: none;
+    }
+  }
+  md-card + p {
+    text-align: center;
+    a {
+      color: transparentize(#FFF, 0.2);
+      font-size: 0.875rem;
+    }
+  }
+  md-icon {
+    color: rgb(69,90,100);
+  }
+  md-input-container {
+    margin-bottom: 0;
+  }
+  md-card-footer {
+    text-align: center;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    a {
+      color: #878797;
+      font-size: 17px;
+      text-decoration: none;
+      span {
+        color: $brand-blue-dark;
+        text-decoration: underline;
+      }
+    }
+  }
+}

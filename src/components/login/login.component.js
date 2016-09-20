@@ -1,12 +1,12 @@
+// <login>
+// ==
 // The login screen presented to an anonymous user when any route is loaded.
 
 // Component Setup
-// ---------------
-
+// --
 // All component bindings are one-way:
 // * `confirmed`: Whether the session check response has been received. Until
 //   this evaluates to `true`, the form itself will remain hidden.
-
 angular.module('bethel.ui.login', []).component('login', {
   bindings: {
     confirmed: '<'
@@ -16,8 +16,7 @@ angular.module('bethel.ui.login', []).component('login', {
 });
 
 // Component Controller
-// --------------------
-
+// --
 function LoginComponent(authService, sailsSocket) {
 
   var $ctrl = this;

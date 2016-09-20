@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bethel UI</title>
     <link rel="stylesheet" href="/frontend/app.css" />
-    <link rel="stylesheet" href="/lib/angular-material/angular-material.min.css" />
     <link rel="stylesheet" href="/dist/bethel.ui.css" />
   </head>
 

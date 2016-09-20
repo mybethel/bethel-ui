@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="bethel">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bethel UI</title>
+    <link rel="stylesheet" href="/frontend/app.css" />
+    <link rel="stylesheet" href="/lib/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" href="/dist/bethel.ui.css" />
+  </head>
+
+  <!-- Vendor Libraries -->
+  <script src="/lib/angular/angular.min.js"></script>
+  <script src="/lib/angular-animate/angular-animate.min.js"></script>
+  <script src="/lib/angular-aria/angular-aria.min.js"></script>
+  <script src="/lib/angular-material/angular-material.min.js"></script>
+  <script src="/lib/angular-messages/angular-messages.min.js"></script>
+  <script src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <script src="/lib/sails.io.js-dist/sails.io.js" autoconnect="false"></script>
+  <script src="/lib/angular-sails-socket/dist/angular-sails-socket.min.js"></script>
+
+  <!-- Bethel UI module -->
+  <script src="/dist/bethel.ui.js"></script>
+  <script src="/frontend/app.js"></script>
+
+  <body ng-controller="DemoAppController" layout="column" ng-cloak>
+
+    <top-bar></top-bar>
+
+    <main-content flex layout="row" links="navLinks" static="true">
+
+      ${typeof demo !== 'undefined' ? demo : ''}
+
+      ${body}
+
+    </main-content>
+
+  </body>
+
+</html>
